@@ -41,7 +41,7 @@ const NavLinks = (): ReactElement => {
             className={clsx(
               "flex grow items-center justify-center gap-2 rounded-md p-1 text-sm font-medium text-white md:p-3 hover:text-blue-600",
               {
-                "bg-sky-100 text-blue-600": pathname === link.href,
+                "bg-gray-400 text-blue-600": pathname === link.href,
               }
             )}
           >
