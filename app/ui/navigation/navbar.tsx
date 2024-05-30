@@ -6,7 +6,7 @@ const Navbar = (): ReactElement => {
   return (
     <nav className="p-4 bg-navbarBackground border-b border-secondary">
       <div className="container mx-auto flex justify-around items-center">
-        <div className="text-textPrimary text-xl font-bold">
+        <div className="text-textPrimary text-xl font-bold md:text-2xl">
           <Link href="/">Image</Link>
         </div>
         <div className="space-x-4">

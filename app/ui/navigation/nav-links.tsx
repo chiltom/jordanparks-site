@@ -19,7 +19,7 @@ const links = [
     href: "/lessons",
   },
   {
-    name: "Sample Packs",
+    name: "Samples",
     href: "/sample-packs",
   },
   {
@@ -39,7 +39,7 @@ const NavLinks = (): ReactElement => {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex grow items-center justify-center gap-2 rounded-md text-textPrimary hover:text-linkHover p-1 text-sm font-medium md:px-3",
+              "flex grow items-center justify-center gap-2 rounded-md text-textPrimary hover:text-linkHover px-1 text-sm font-medium md:px-3 md:text-lg",
               {
                 "bg-gray-200": pathname === link.href,
               }
