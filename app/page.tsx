@@ -5,13 +5,15 @@ import CTASection from "./ui/home/cta-section";
 
 const Home: React.FC = (): ReactElement => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-around bg-background p-10">
+    <>
       <HeroHeader />
-      <div className="px-4">
-        <AboutSection />
-        <CTASection />
-      </div>
-    </main>
+      <main className="flex min-h-screen flex-col items-center bg-background p-10">
+        <div>
+          <AboutSection />
+          <CTASection />
+        </div>
+      </main>
+    </>
   );
 };
 
