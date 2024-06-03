@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 const SamplePackHeader: React.FC = (): ReactElement => {
   return (
-    <header className="bg-primary text-buttonText text-center py-20 px-4 rounded-lg mt-4">
+    <header className="bg-primary text-buttonText text-center py-20 px-4">
       <h1 className="text-4xl font-bold">Discover My Sample Packs</h1>
       <p className="mt-4">
         High-quality samples for your music production needs
