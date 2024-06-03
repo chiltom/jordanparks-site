@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import HeroHeader from "./ui/home/hero-header";
-import AboutSection from "./ui/home/about-section";
-import CTASection from "./ui/home/cta-section";
+import HeroHeader from "./ui/home/HeroHeader";
+import AboutSection from "./ui/home/AboutSection";
+import CTASection from "./ui/home/CTASection";
 
 const Home: React.FC = (): ReactElement => {
   return (

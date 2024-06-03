@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import SamplePackCard from "../ui/sample-packs/sample-pack-card";
-import SamplePackHeader from "../ui/sample-packs/sp-header";
-import FAQSection from "../ui/sample-packs/sp-faq-section";
+import SamplePackCard from "../ui/sample-packs/SamplePackCard";
+import SamplePackHeader from "../ui/sample-packs/SamplePackHeader";
+import FAQSection from "../ui/sample-packs/FAQSection";
 
 const samplePacks = [
   {
@@ -35,6 +35,7 @@ const SamplePacks: React.FC = (): ReactElement => {
           ))}
         </div>
       </section>
+      <FAQSection />
     </main>
   );
 };
