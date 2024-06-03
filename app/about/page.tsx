@@ -5,7 +5,7 @@ import GallerySection from "../ui/about/GallerySection";
 import RecognitionSection from "../ui/about/RecognitionSection";
 import StatisticsSection from "../ui/about/StatisticsSection";
 import TestimonialSection from "../ui/about/TestimonialSection";
-import Biography from "../ui/about/Biography";
+import Biography from "../ui/about/AutoBiography";
 
 const About: React.FC = (): ReactElement => {
   return (
