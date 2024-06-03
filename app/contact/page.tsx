@@ -7,14 +7,14 @@ import FAQSection from "../ui/contact/FAQSection";
 
 const Contact = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen flex flex-col items-center justify-around p-20">
+    <div className="bg-background min-h-screen">
       <ContactHeader />
-      <div>
+      <main className="px-4">
         <ContactForm />
         <ContactSection />
         <LocationsSection />
         <FAQSection />
-      </div>
+      </main>
     </div>
   );
 };

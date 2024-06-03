@@ -9,16 +9,16 @@ import Biography from "../ui/about/Biography";
 
 const About: React.FC = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen flex flex-col items-center justify-around p-20">
+    <div className="bg-background min-h-screen">
       <AboutHeader />
-      <div>
+      <main className="px-4">
         <Biography />
         <StatisticsSection />
         <RecognitionSection />
         <GallerySection />
         <TestimonialSection />
         <AboutCTA />
-      </div>
+      </main>
     </div>
   );
 };
