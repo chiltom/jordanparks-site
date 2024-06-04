@@ -1,24 +1,24 @@
 import { ReactElement } from "react";
-import AboutCTA from "../ui/about/about-cta";
-import AboutHeader from "../ui/about/about-header";
-import GallerySection from "../ui/about/gallery-section";
-import RecognitionSection from "../ui/about/recognition-section";
-import StatisticsSection from "../ui/about/statistics-section";
-import TestimonialSection from "../ui/about/testimonial-section";
-import Biography from "../ui/about/biography";
+import AboutCTA from "../ui/about/AboutCTA";
+import AboutHeader from "../ui/about/AboutHeader";
+import GallerySection from "../ui/about/GallerySection";
+import RecognitionSection from "../ui/about/RecognitionSection";
+import StatisticsSection from "../ui/about/StatisticsSection";
+import TestimonialSection from "../ui/about/TestimonialSection";
+import Biography from "../ui/about/AutoBiography";
 
 const About: React.FC = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen flex flex-col items-center justify-around p-20">
+    <div className="bg-background min-h-screen">
       <AboutHeader />
-      <div>
+      <main className="px-4">
         <Biography />
         <StatisticsSection />
         <RecognitionSection />
         <GallerySection />
         <TestimonialSection />
         <AboutCTA />
-      </div>
+      </main>
     </div>
   );
 };

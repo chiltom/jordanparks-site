@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import SamplePackCard from "../ui/sample-packs/sample-pack-card";
-import SamplePackHeader from "../ui/sample-packs/sp-header";
-import FAQSection from "../ui/sample-packs/sp-faq-section";
+import SamplePackCard from "../ui/sample-packs/SamplePackCard";
+import SamplePackHeader from "../ui/sample-packs/SamplePackHeader";
+import FAQSection from "../ui/sample-packs/FAQSection";
 
 const samplePacks = [
   {
@@ -20,10 +20,10 @@ const samplePacks = [
 
 const SamplePacks: React.FC = (): ReactElement => {
   return (
-    <main className="px-4 min-h-screen bg-navbarBackground">
+    <div className="bg-background min-h-screen">
       <SamplePackHeader />
-      <section className="my-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <main className="px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
           {samplePacks.map((pack, index) => (
             <SamplePackCard
               key={index}
@@ -34,8 +34,9 @@ const SamplePacks: React.FC = (): ReactElement => {
             />
           ))}
         </div>
-      </section>
-    </main>
+        <FAQSection />
+      </main>
+    </div>
   );
 };
 

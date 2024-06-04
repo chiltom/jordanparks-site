@@ -1,59 +1,35 @@
 "use client";
 
-import { useState, ReactElement } from "react";
+import { ReactElement, useState } from "react";
 
-const ContactForm: React.FC = (): ReactElement => {
-  const [subject, setSubject] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+const ApplicationFormSection: React.FC = (): ReactElement => {
+  const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [status, setStatus] = useState("");
+  const [message, setMessage] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    const templateParams = {
-      subject,
-      message,
-      email,
-    };
-
-    // Send the email using a provider
+    // Handle form submission
+    console.log("Form submitted:", { name, email, message });
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md mt-8">
-      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-      {status && <p className="mb-4 text-sm text-green-500">{status}</p>}
-      <form onSubmit={handleSubmit}>
+    <section className="bg-navbarBackground border border-secondary rounded-lg p-6 my-4">
+      <h2 className="text-primary text-2xl font-bold">Apply for Lessons</h2>
+      <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-4">
           <label
-            htmlFor="subject"
+            htmlFor="name"
             className="block text-sm font-medium text-gray-700"
           >
-            Subject
+            Name
           </label>
           <input
             type="text"
-            id="subject"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-            rows={4}
             required
           />
         </div>
@@ -73,15 +49,30 @@ const ContactForm: React.FC = (): ReactElement => {
             required
           />
         </div>
+        <div className="mb-4">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium tex-gray-700"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            required
+          />
+        </div>
         <button
           type="submit"
           className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
         >
-          Send Message
+          Submit
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 
-export default ContactForm;
+export default ApplicationFormSection;
