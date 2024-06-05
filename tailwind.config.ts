@@ -9,17 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#0073b1",
-        secondary: "#005582",
-        background: "#f4f4f4",
-        navbarBackground: "#ffffff",
-        buttonBackground: "#0073b1",
-        buttonText: "#ffffff",
-        linkText: "#0073b1",
-        linkHover: "#005582",
-        textPrimary: "#333333",
-        textSecondary: "#666666",
+        primary: "#0f172a",
+        secondary: "#1e293b",
+        accent: "#6a0dad",
+        accentLight: "#8a2be2",
+        neonBlue: "#0ea5e9",
+        neonPink: "#d16ba5",
+        background: "#1a1a2e",
+        cardBackground: "#162447",
+        buttonText: "#f3f4f6",
+        textPrimary: "#e0e7ff",
+        textSecondary: "#cbd5e1",
       },
+      boxShadow: {
+        neon: '0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.5)',
+        neonPink: '0 0 5px rgba(236, 72, 153, 0.5), 0 0 10px rgba(236, 72, 153, 0.5), 0 0 15px rgba(236, 72, 153, 0.5)',
+      }
     },
   },
   variants: {

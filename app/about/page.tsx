@@ -9,7 +9,7 @@ import Biography from "../ui/about/AutoBiography";
 
 const About: React.FC = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="min-h-screen">
       <AboutHeader />
       <main className="px-4">
         <Biography />

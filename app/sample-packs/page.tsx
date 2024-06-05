@@ -20,7 +20,7 @@ const samplePacks = [
 
 const SamplePacks: React.FC = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="min-h-screen">
       <SamplePackHeader />
       <main className="px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">

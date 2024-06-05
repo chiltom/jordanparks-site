@@ -14,13 +14,13 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="bg-navbarBackground border border-secondary rounded-lg p-6 my-4">
-      <h2 className="text-primary text-2xl font-bold">Apply for Lessons</h2>
+    <section className="bg-cardBackground border border-accentLight rounded-lg p-6 my-4 shadow-neon">
+      <h2 className="text-accent text-2xl font-bold">Apply for Lessons</h2>
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-4">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-textSecondary"
           >
             Name
           </label>
@@ -29,14 +29,14 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-textSecondary"
           >
             Email
           </label>
@@ -45,14 +45,14 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="message"
-            className="block text-sm font-medium tex-gray-700"
+            className="block text-sm font-medium text-textSecondary"
           >
             Message
           </label>
@@ -60,13 +60,13 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+          className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-buttonText bg-neonBlue hover:bg-neonPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
         >
           Submit
         </button>

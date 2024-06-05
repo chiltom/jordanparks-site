@@ -2,11 +2,11 @@ import { ReactElement } from "react";
 
 const StatisticsSection: React.FC = (): ReactElement => {
   return (
-    <section className="bg-navbarBackground border border-secondary rounded-lg p-6 my-4">
-      <h2 className="text-primary text-2xl font-bold">
+    <section className="bg-cardBackground border border-accentLight rounded-lg p-6 my-4 shadow-neon">
+      <h2 className="text-accent text-2xl font-bold">
         Some Statistics about Jordan
       </h2>
-      <p className="mt-4">Some relevant stastics about Jordan</p>
+      <p className="mt-4 text-textSecondary">Some relevant stastics about Jordan</p>
     </section>
   );
 };
