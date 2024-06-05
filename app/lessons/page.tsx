@@ -10,9 +10,9 @@ import PricingSection from "../ui/lessons/PricingSection";
 
 const Lessons = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <HeaderSection />
-      <main className="px-4">
+      <main className="px-4 flex-grow">
         <FeatureSection />
         <BenefitsSection />
         <HowItWorksSection />

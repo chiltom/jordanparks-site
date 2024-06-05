@@ -39,9 +39,9 @@ const NavLinks = (): ReactElement => {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex grow items-center justify-center gap-2 rounded-md text-textPrimary hover:text-linkHover px-1 text-sm font-medium md:px-3 md:text-lg",
+              "flex grow items-center justify-center gap-2 rounded-md text-textPrimary px-1 text-sm font-medium md:px-3 md:text-lg",
               {
-                "bg-gray-200": pathname === link.href,
+                "ring-accent ring-2": pathname === link.href,
               }
             )}
           >

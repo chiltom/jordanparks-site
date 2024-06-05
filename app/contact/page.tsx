@@ -7,7 +7,7 @@ import FAQSection from "../ui/contact/FAQSection";
 
 const Contact = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="min-h-screen">
       <ContactHeader />
       <main className="px-4">
         <ContactForm />

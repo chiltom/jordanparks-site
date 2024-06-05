@@ -7,7 +7,7 @@ const Home: React.FC = (): ReactElement => {
   return (
     <>
       <HeroHeader />
-      <main className="flex min-h-screen flex-col items-center bg-background p-10">
+      <main className="px-4 min-h-screen">
         <div>
           <AboutSection />
           <CTASection />

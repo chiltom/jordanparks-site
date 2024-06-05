@@ -9,7 +9,7 @@ import ReviewsSection from "../ui/music/ReviewsSection";
 
 const Music = (): ReactElement => {
   return (
-    <div className="bg-background min-h-screen">
+    <div className="min-h-screen">
       <MusicHeader />
       <main className="px-4">
         <FeatureSection />
