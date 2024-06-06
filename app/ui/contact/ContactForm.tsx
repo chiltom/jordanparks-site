@@ -21,14 +21,14 @@ const ContactForm: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="bg-cardBackground border border-accentLight rounded-lg p-6 my-4 shadow-neon">
-      <h2 className="text-2xl font-bold mb-4 text-accent">Contact Me</h2>
+    <section className="section">
+      <h2 className="text-2xl font-bold mb-4 text-black">Contact</h2>
       {status && <p className="mb-4 text-sm text-green-500">{status}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
             htmlFor="subject"
-            className="block text-sm font-medium text-textSecondary"
+            className="block text-sm font-medium text-gray-800"
           >
             Subject
           </label>
@@ -37,14 +37,14 @@ const ContactForm: React.FC = (): ReactElement => {
             id="subject"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-textSecondary"
+            className="block text-sm font-medium text-gray-800"
           >
             Message
           </label>
@@ -52,7 +52,7 @@ const ContactForm: React.FC = (): ReactElement => {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
             rows={4}
             required
           />
@@ -60,7 +60,7 @@ const ContactForm: React.FC = (): ReactElement => {
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-textSecondary"
+            className="block text-sm font-medium text-gray-800"
           >
             Email
           </label>
@@ -69,13 +69,13 @@ const ContactForm: React.FC = (): ReactElement => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+            className="mt-1 text-black block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm"
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-buttonText bg-neonBlue hover:bg-neonPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+          className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-lightBlue hover:bg-lightPurple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue shadow-lg"
         >
           Send Message
         </button>

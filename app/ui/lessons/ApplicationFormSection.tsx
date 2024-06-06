@@ -3,9 +3,9 @@
 import { ReactElement, useState } from "react";
 
 const ApplicationFormSection: React.FC = (): ReactElement => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,13 +14,13 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="bg-cardBackground border border-accentLight rounded-lg p-6 my-4 shadow-neon">
-      <h2 className="text-accent text-2xl font-bold">Apply for Lessons</h2>
+    <section className="section">
+      <h2 className="text-2xl font-bold text-black">Apply for Lessons</h2>
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-4">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-textSecondary"
+            className="block text-sm font-medium text-gray-800"
           >
             Name
           </label>
@@ -29,14 +29,14 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+            className="mt-1 text-black block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-textSecondary"
+            className="block text-sm font-medium text-gray-800"
           >
             Email
           </label>
@@ -45,14 +45,14 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-textSecondary"
+            className="block text-sm font-medium text-gray-800"
           >
             Message
           </label>
@@ -60,13 +60,14 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
+            rows={4}
             required
           />
         </div>
         <button
           type="submit"
-          className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-buttonText bg-neonBlue hover:bg-neonPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+          className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-lightBlue hover:bg-lightPurple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue shadow-lg"
         >
           Submit
         </button>

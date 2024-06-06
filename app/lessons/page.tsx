@@ -12,7 +12,7 @@ const Lessons = (): ReactElement => {
   return (
     <div className="flex flex-col min-h-screen">
       <HeaderSection />
-      <main className="px-4 flex-grow">
+      <main className="flex-grow">
         <FeatureSection />
         <BenefitsSection />
         <HowItWorksSection />

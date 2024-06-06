@@ -19,7 +19,7 @@ const links = [
     href: "/lessons",
   },
   {
-    name: "Samples",
+    name: "Store",
     href: "/sample-packs",
   },
   {
@@ -28,18 +28,22 @@ const links = [
   },
 ];
 
-const NavLinks = (): ReactElement => {
+const NavLinks = ({ isMobile }: { isMobile: boolean }): ReactElement => {
   const pathname: string = usePathname();
 
   return (
-    <div className="flex flex-row">
+    <div
+      className={
+        isMobile ? "flex flex-col items-end space-y-2" : "flex flex-row space-x-4"
+      }
+    >
       {links.map((link) => {
         return (
           <Link
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex grow items-center justify-center gap-2 rounded-md text-textPrimary px-1 text-sm font-medium md:px-3 md:text-lg",
+              "flex items-center justify-center gap-2 rounded-md text-textPrimary px-1 text-sm font-medium md:px-3 md:text-lg",
               {
                 "ring-accent ring-2": pathname === link.href,
               }

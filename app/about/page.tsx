@@ -11,7 +11,7 @@ const About: React.FC = (): ReactElement => {
   return (
     <div className="min-h-screen">
       <AboutHeader />
-      <main className="px-4">
+      <main>
         <Biography />
         <StatisticsSection />
         <RecognitionSection />
