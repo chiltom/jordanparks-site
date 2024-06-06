@@ -29,7 +29,7 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-section1 focus:border-section1 sm:text-sm"
+            className="mt-1 text-black block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm"
             required
           />
         </div>
@@ -45,7 +45,7 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-section2 focus:border-section2 sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
             required
           />
         </div>
@@ -60,7 +60,7 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-section3 focus:border-section3 sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
             rows={4}
             required
           />
