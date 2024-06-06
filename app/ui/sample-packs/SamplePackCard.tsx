@@ -15,13 +15,13 @@ const SamplePackCard: React.FC<SamplePackCardProps> = ({
   link,
 }): ReactElement => {
   return (
-    <div className="bg-cardBackground rounded-lg overflow-hidden shadow-neon hover:shadow-neonPink">
+    <div className="bg-lightPurple rounded-lg overflow-hidden hover:shadow-lightBlue">
       <Image src={image} alt={title} width={192} height={192} className="object-cover" />
       <div className="p-4">
-        <h3 className="text-lg font-bold mb-2 text-accentLight">{title}</h3>
-        <p className="text-textSecondary mb-2">{price}</p>
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
+        <p className="text-white mb-2">{price}</p>
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <button className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-buttonText bg-neonBlue hover:bg-neonPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+          <button className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-lightBlue hover:bg-lightPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightPink shadow-lg">
             Buy Now
           </button>
         </a>
