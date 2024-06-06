@@ -11,7 +11,7 @@ const Music = (): ReactElement => {
   return (
     <div className="min-h-screen">
       <MusicHeader />
-      <main className="px-4">
+      <main>
         <FeatureSection />
         <GallerySection />
         <PortfolioItemBodySection />

@@ -2,11 +2,11 @@ import { ReactElement } from "react";
 
 const LogoListSection: React.FC = (): ReactElement => {
   return (
-    <section className="bg-cardBackground border border-accentLight rounded-lg p-6 my-4 shadow-neon">
-      <h2 className="text-accent text-2xl font-bold">
+    <section className="section">
+      <h2 className="text-black text-2xl font-bold">
         Where to Find My Music
       </h2>
-      <p className="mt-4 text-textSecondary">
+      <p className="mt-4 text-gray-800">
         Display logos of music platforms where the music can be found
       </p>
     </section>
