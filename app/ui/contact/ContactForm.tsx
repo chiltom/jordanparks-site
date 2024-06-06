@@ -22,7 +22,7 @@ const ContactForm: React.FC = (): ReactElement => {
 
   return (
     <section className="bg-cardBackground border border-accentLight rounded-lg p-6 my-4 shadow-neon">
-      <h2 className="text-2xl font-bold mb-4 text-accent">Contact Me</h2>
+      <h2 className="text-2xl font-bold mb-4 text-accent">Contact</h2>
       {status && <p className="mb-4 text-sm text-green-500">{status}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -72,6 +72,10 @@ const ContactForm: React.FC = (): ReactElement => {
             className="mt-1 text-textSecondary bg-secondary block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             required
           />
+        </div>
+        <div className="mb-4">
+          <h3 className="text-center font-bold text-textSecondary">Booking and Inquiries</h3>
+          <p className="text-center text-textSecondary">Please send a separate email to ___</p>
         </div>
         <button
           type="submit"

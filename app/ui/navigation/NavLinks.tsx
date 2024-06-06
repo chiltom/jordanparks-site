@@ -19,7 +19,7 @@ const links = [
     href: "/lessons",
   },
   {
-    name: "Samples",
+    name: "Store",
     href: "/sample-packs",
   },
   {
