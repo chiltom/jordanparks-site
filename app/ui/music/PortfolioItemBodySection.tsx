@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 const PortfolioItemBodySection: React.FC = (): ReactElement => {
   return (
-    <section className="section">
+    <section className="section text-center w-full h-full flex flex-col justify-center">
       <h2 className="text-black text-2xl font-bold">Album Details</h2>
       <p className="mt-4 text-gray-800">
         Detailed section on an album with track listings, album credits, and
