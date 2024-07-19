@@ -20,23 +20,21 @@ const samplePacks = [
 
 const SamplePacks: React.FC = (): ReactElement => {
   return (
-    <div className="min-h-screen">
+    <>
       <SamplePackHeader />
-      <main>
-        <div className="section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4">
-          {samplePacks.map((pack, index) => (
-            <SamplePackCard
-              key={index}
-              image={pack.image}
-              title={pack.title}
-              price={pack.price}
-              link={pack.link}
-            />
-          ))}
-        </div>
-        <FAQSection />
-      </main>
-    </div>
+      <div className="section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-4 w-full h-full">
+        {samplePacks.map((pack, index) => (
+          <SamplePackCard
+            key={index}
+            image={pack.image}
+            title={pack.title}
+            price={pack.price}
+            link={pack.link}
+          />
+        ))}
+      </div>
+      <FAQSection />
+    </>
   );
 };
 
