@@ -8,16 +8,14 @@ import BookingSection from "../ui/contact/BookingSection";
 
 const Contact = (): ReactElement => {
   return (
-    <div className="min-h-screen">
+    <>
       <ContactHeader />
-      <main>
-        <ContactForm />
-        <BookingSection />
-        <ContactSection />
-        <LocationsSection />
-        <FAQSection />
-      </main>
-    </div>
+      <ContactForm />
+      <BookingSection />
+      <ContactSection />
+      <LocationsSection />
+      <FAQSection />
+    </>
   );
 };
 
