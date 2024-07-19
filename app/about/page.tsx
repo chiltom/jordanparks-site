@@ -9,17 +9,15 @@ import Biography from "../ui/about/AutoBiography";
 
 const About: React.FC = (): ReactElement => {
   return (
-    <div className="min-h-screen">
+    <>
       <AboutHeader />
-      <main>
-        <Biography />
-        <StatisticsSection />
-        <RecognitionSection />
-        <GallerySection />
-        <TestimonialSection />
-        <AboutCTA />
-      </main>
-    </div>
+      <Biography />
+      <StatisticsSection />
+      <RecognitionSection />
+      <GallerySection />
+      <TestimonialSection />
+      <AboutCTA />
+    </>
   );
 };
 
