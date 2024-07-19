@@ -10,18 +10,16 @@ import PricingSection from "../ui/lessons/PricingSection";
 
 const Lessons = (): ReactElement => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <HeaderSection />
-      <main className="flex-grow">
-        <FeatureSection />
-        <BenefitsSection />
-        <HowItWorksSection />
-        <PricingSection />
-        <ApplicationFormSection />
-        <FAQSection />
-        <CTASection />
-      </main>
-    </div>
+      <FeatureSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <PricingSection />
+      <ApplicationFormSection />
+      <FAQSection />
+      <CTASection />
+    </>
   );
 };
 

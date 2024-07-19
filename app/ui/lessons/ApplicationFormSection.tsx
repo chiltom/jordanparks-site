@@ -14,9 +14,9 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="section">
+    <section className="section text-center w-full h-full flex flex-col justify-center">
       <h2 className="text-2xl font-bold text-black">Apply for Lessons</h2>
-      <form onSubmit={handleSubmit} className="mt-4">
+      <form onSubmit={handleSubmit} className="mt-4 px-56">
         <div className="mb-4">
           <label
             htmlFor="name"

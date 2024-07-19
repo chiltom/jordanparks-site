@@ -21,10 +21,10 @@ const ContactForm: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="section">
+    <section className="section text-center w-full h-full flex flex-col justify-center">
       <h2 className="text-2xl font-bold mb-4 text-black">Contact</h2>
       {status && <p className="mb-4 text-sm text-green-500">{status}</p>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="px-96">
         <div className="mb-4">
           <label
             htmlFor="subject"

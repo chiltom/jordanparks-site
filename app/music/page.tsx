@@ -9,17 +9,15 @@ import ReviewsSection from "../ui/music/ReviewsSection";
 
 const Music = (): ReactElement => {
   return (
-    <div className="min-h-screen">
+    <>
       <MusicHeader />
-      <main>
-        <FeatureSection />
-        <GallerySection />
-        <PortfolioItemBodySection />
-        <FeaturesListSection />
-        <ReviewsSection />
-        <LogoListSection />
-      </main>
-    </div>
+      <FeatureSection />
+      <GallerySection />
+      <PortfolioItemBodySection />
+      <FeaturesListSection />
+      <ReviewsSection />
+      <LogoListSection />
+    </>
   );
 };
 

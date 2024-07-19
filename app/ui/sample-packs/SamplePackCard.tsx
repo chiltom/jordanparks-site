@@ -15,8 +15,14 @@ const SamplePackCard: React.FC<SamplePackCardProps> = ({
   link,
 }): ReactElement => {
   return (
-    <div className="bg-lightPurple rounded-lg overflow-hidden hover:shadow-lightBlue">
-      <Image src={image} alt={title} width={192} height={192} className="object-cover" />
+    <div className="bg-lightPurple flex flex-col max-h-96 rounded-lg overflow-hidden hover:shadow-lightBlue">
+      <Image
+        src={image}
+        alt={title}
+        width={192}
+        height={192}
+        className="object-cover"
+      />
       <div className="p-4">
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-white mb-2">{price}</p>

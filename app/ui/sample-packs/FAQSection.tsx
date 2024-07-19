@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 const FAQSection: React.FC = (): ReactElement => {
   return (
-    <section className="section">
+    <section className="section text-center w-full h-full flex flex-col justify-center">
       <h2 className="text-black text-2xl font-bold mb-4">
         Frequently Asked Questions
       </h2>
@@ -12,7 +12,9 @@ const FAQSection: React.FC = (): ReactElement => {
         </h3>
         <p className="mb-4 text-gray-800">Each sample pack includes...</p>
 
-        <h3 className="text-lg font-semibold text-white">How can I use the samples?</h3>
+        <h3 className="text-lg font-semibold text-white">
+          How can I use the samples?
+        </h3>
         <p className="mb-4 text-gray-800">
           You can use them in any of your projects, be sure to follow the
           license agreement

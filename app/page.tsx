@@ -7,12 +7,8 @@ const Home: React.FC = (): ReactElement => {
   return (
     <>
       <HeroHeader />
-      <main className="px-4 min-h-screen">
-        <div>
-          <AboutSection />
-          <CTASection />
-        </div>
-      </main>
+      <AboutSection />
+      <CTASection />
     </>
   );
 };
