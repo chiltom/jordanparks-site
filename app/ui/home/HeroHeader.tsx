@@ -1,14 +1,25 @@
 import { ReactElement } from "react";
+import Image from "next/image";
+import image1 from "@/public/image1.jpg";
 
+/**
+ * This component will change, the image will turn into a banner image
+ * that spans the entirety of the section and have an opacity value over
+ * it making it more transparent for header text to lay over.
+ */
 const HeroHeader: React.FC = (): ReactElement => {
   return (
-    <header className="text-center flex flex-col pt-72 w-full h-full">
+    <header className="text-center flex flex-col items-center gap-10 pt-10 w-full h-full">
       <h1 className="text-5xl font-bold text-white">
         Discover Unique, Amazing Music
       </h1>
-      <p className="mt-4 text-lg text-gray-300">
-        A hero image with a subtle tagline
-      </p>
+      <Image
+        src={image1}
+        alt="Jordan Parks"
+        width={400}
+        height={400}
+        className="rounded-lg"
+      />
     </header>
   );
 };
