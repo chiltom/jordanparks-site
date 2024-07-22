@@ -3,8 +3,6 @@ import AboutCTA from "../ui/about/AboutCTA";
 import AboutHeader from "../ui/about/AboutHeader";
 import GallerySection from "../ui/about/GallerySection";
 import RecognitionSection from "../ui/about/RecognitionSection";
-import StatisticsSection from "../ui/about/StatisticsSection";
-import TestimonialSection from "../ui/about/TestimonialSection";
 import Biography from "../ui/about/AutoBiography";
 
 const About: React.FC = (): ReactElement => {
@@ -12,10 +10,8 @@ const About: React.FC = (): ReactElement => {
     <>
       <AboutHeader />
       <Biography />
-      <StatisticsSection />
       <RecognitionSection />
       <GallerySection />
-      <TestimonialSection />
       <AboutCTA />
     </>
   );
