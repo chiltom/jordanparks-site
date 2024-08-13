@@ -10,9 +10,6 @@ import image1 from "@/public/image1.jpg";
 const HeroHeader: React.FC = (): ReactElement => {
   return (
     <header className="text-center flex flex-col items-center gap-10 pt-10 w-full h-full">
-      <h1 className="text-5xl font-bold text-white">
-        Discover Unique, Amazing Music
-      </h1>
       <Image
         src={image1}
         alt="Jordan Parks"
