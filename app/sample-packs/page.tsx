@@ -3,17 +3,24 @@ import SamplePackCard from "../ui/sample-packs/SamplePackCard";
 import SamplePackHeader from "../ui/sample-packs/SamplePackHeader";
 import FAQSection from "../ui/sample-packs/FAQSection";
 
-const samplePacks = [
+type SamplePack = {
+  image: string;
+  title: string;
+  price: number;
+  link: string;
+};
+
+const samplePacks: SamplePack[] = [
   {
     image: "",
     title: "Sample Pack 1",
-    price: "$19.99",
+    price: 19.99,
     link: "",
   },
   {
     image: "",
     title: "Sample Pack 2",
-    price: "$24.99",
+    price: 24.99,
     link: "",
   },
 ];

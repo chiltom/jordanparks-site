@@ -5,7 +5,7 @@ import Link from "next/link";
 import NavLinks from "./NavLinks";
 import Image from "next/image";
 import Brand from "@/public/brand.webp";
-import ToggleIcon from "@/public/flower-icon.png"; // Update with the correct path to your image
+import ToggleIcon from "@/public/flower-icon.png";
 
 const Navbar = (): ReactElement => {
   const [isOpen, setIsOpen] = useState(false);

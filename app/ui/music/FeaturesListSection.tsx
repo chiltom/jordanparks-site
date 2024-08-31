@@ -8,6 +8,9 @@ const FeaturesListSection: React.FC = (): ReactElement => {
         List of key achievements, awards, or notable performances related to the
         music.
       </p>
+      <p className="mt-4 text-gray-800">
+        Reviews from different stakeholders and critics.
+      </p>
     </section>
   );
 };
