@@ -4,7 +4,7 @@ import Image from "next/image";
 interface SamplePackCardProps {
   image: string;
   title: string;
-  price: string;
+  price: number;
   link: string;
 }
 
@@ -25,7 +25,7 @@ const SamplePackCard: React.FC<SamplePackCardProps> = ({
       />
       <div className="p-4">
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
-        <p className="text-white mb-2">{price}</p>
+        <p className="text-white mb-2">${price}</p>
         <a href={link} target="_blank" rel="noopener noreferrer">
           <button className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-lightBlue hover:bg-lightPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightPink shadow-lg">
             Buy Now
