@@ -3,20 +3,23 @@
 import { ReactElement, useState } from "react";
 
 const ApplicationFormSection: React.FC = (): ReactElement => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState<string>("");
+  const [age, setAge] = useState<string>("");
+  const [goal, setGoal] = useState<string>("");
+  const [timePlayed, setTimePlayed] = useState<string>("");
+  const [idols, setIdols] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", { name, email, message });
+    console.log("Form submitted:", { name, email });
   };
 
   return (
     <section className="section text-center w-full h-full flex flex-col justify-center">
       <h2 className="text-2xl font-bold text-black">Apply for Lessons</h2>
-      <form onSubmit={handleSubmit} className="mt-4 px-56">
+      <form onSubmit={handleSubmit} className="mt-4 md:px-96">
         <div className="mb-4">
           <label
             htmlFor="name"
@@ -29,6 +32,22 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="mt-1 text-black block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="age"
+            className="block text-sm font-medium text-gray-800"
+          >
+            Age
+          </label>
+          <input
+            type="text"
+            id="age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
             className="mt-1 text-black block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm"
             required
           />
@@ -51,17 +70,49 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="message"
+            htmlFor="timePlayed"
             className="block text-sm font-medium text-gray-800"
           >
-            Message
+            How long have you played?
+          </label>
+          <input
+            type="text"
+            id="timePlayed"
+            value={timePlayed}
+            onChange={(e) => setTimePlayed(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="goal"
+            className="block text-sm font-medium text-gray-800"
+          >
+            What are your music learning goals?
           </label>
           <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            id="goal"
+            value={goal}
+            onChange={(e) => setGoal(e.target.value)}
             className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
-            rows={4}
+            rows={2}
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="idols"
+            className="block text-sm font-medium text-gray-800"
+          >
+            What musicians do you look up to? Who influences your music?
+          </label>
+          <textarea
+            id="idols"
+            value={idols}
+            onChange={(e) => setIdols(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-lightBlue focus:border-lightBlue sm:text-sm text-black"
+            rows={2}
             required
           />
         </div>
