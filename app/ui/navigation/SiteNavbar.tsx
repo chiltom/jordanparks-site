@@ -19,7 +19,13 @@ const Navbar = (): ReactElement => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-textPrimary text-xl font-bold md:text-2xl">
           <Link href="/">
-            <Image src={Brand} alt="Jordan Parks" width={100} height={50} />
+            <Image
+              src={Brand}
+              alt="Jordan Parks"
+              width={65}
+              height={65}
+              className="rounded-lg"
+            />
           </Link>
         </div>
         <div className="hidden md:flex space-x-4">
@@ -27,7 +33,7 @@ const Navbar = (): ReactElement => {
         </div>
         <div className="md:hidden">
           <button onClick={handleToggle} className="focus:outline-none">
-            <Image src={ToggleIcon} alt="Menu Toggle" width={30} height={30} />
+            <Image src={ToggleIcon} alt="Menu Toggle" width={40} height={40} />
           </button>
         </div>
       </div>
