@@ -1,8 +1,15 @@
 "use client";
 
 import { ReactElement, useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
-const ApplicationFormSection: React.FC = (): ReactElement => {
+interface ApplicationFormProps {
+  scrollToNextSection: () => void;
+}
+
+const ApplicationFormSection: React.FC<ApplicationFormProps> = ({
+  scrollToNextSection,
+}): ReactElement => {
   const [name, setName] = useState<string>("");
   const [age, setAge] = useState<string>("");
   const [goal, setGoal] = useState<string>("");
@@ -17,7 +24,7 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="section text-center w-full h-full flex flex-col justify-center">
+    <section className="text-center w-full h-screen flex flex-col justify-center">
       <h2 className="text-2xl font-bold text-black">Apply for Lessons</h2>
       <form onSubmit={handleSubmit} className="mt-4 md:px-96">
         <div className="mb-4">
@@ -123,6 +130,14 @@ const ApplicationFormSection: React.FC = (): ReactElement => {
           Submit
         </button>
       </form>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
+        <button
+          onClick={scrollToNextSection}
+          className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white"
+        >
+          <FaChevronDown size={24} />
+        </button>
+      </div>
     </section>
   );
 };

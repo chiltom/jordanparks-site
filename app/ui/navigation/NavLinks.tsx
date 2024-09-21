@@ -28,7 +28,15 @@ const links = [
   },
 ];
 
-const NavLinks = ({ isMobile }: { isMobile: boolean }): ReactElement => {
+interface NavLinkProps {
+  isMobile: boolean;
+  handleClose: () => void;
+}
+
+const NavLinks: React.FC<NavLinkProps> = ({
+  isMobile,
+  handleClose,
+}): ReactElement => {
   const pathname: string = usePathname();
 
   return (
@@ -45,11 +53,12 @@ const NavLinks = ({ isMobile }: { isMobile: boolean }): ReactElement => {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex items-center justify-center gap-2 rounded-md text-textPrimary px-2 py-1 md:py-3 text-2xl md:text-lg font-medium md:px-3",
+              "flex items-center justify-center gap-2 rounded-md text-neon text-textPrimary px-2 py-1 md:py-3 text-xl md:text-lg font-medium md:px-3",
               {
-                "ring-accent ring-2": pathname === link.href,
+                "ring-rose-300 ring-2": pathname === link.href,
               }
             )}
+            onClick={handleClose}
           >
             <p>{link.name}</p>
           </Link>

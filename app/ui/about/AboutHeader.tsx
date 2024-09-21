@@ -1,24 +1,31 @@
 import { ReactElement } from "react";
 import Image from "next/image";
-import image2 from "@/public/image2.jpg";
+import about_image from "@/public/images/about_page.jpg";
+import { FaChevronDown } from "react-icons/fa";
 
-/**
- * This component will change, the image will turn into a banner image
- * that spans the entirety of the section and have an opacity value over
- * it making it more transparent for header text to lay over.
- */
-const AboutHeader: React.FC = (): ReactElement => {
+interface AboutHeaderProps {
+  scrollToNextSection: () => void;
+}
+
+const AboutHeader: React.FC<AboutHeaderProps> = ({
+  scrollToNextSection,
+}): ReactElement => {
   return (
-    <header className="text-center flex flex-col items-center w-full h-full">
-      <h1 className="text-5xl font-bold text-white">Jordan</h1>
-      <div className="py-6">
-        <Image
-          src={image2}
-          alt="Jordan Parks"
-          width={500}
-          height={500}
-          className="rounded-lg"
-        />
+    <header className="relative w-full h-full">
+      <Image
+        src={about_image}
+        alt="Jordan Parks"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-90"
+      />
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
+        <button
+          onClick={scrollToNextSection}
+          className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white"
+        >
+          <FaChevronDown size={24} />
+        </button>
       </div>
     </header>
   );

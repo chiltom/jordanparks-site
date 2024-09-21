@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 const FAQSection: React.FC = (): ReactElement => {
   return (
-    <section className="section text-center w-full h-full flex flex-col justify-center">
+    <section className="text-center w-full h-screen flex flex-col justify-center">
       <h2 className="text-2xl font-bold text-black mb-4">
         Frequently Asked Questions
       </h2>

@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 const CTASection: React.FC = (): ReactElement => {
   return (
-    <section className="section text-center w-full h-full flex flex-col justify-center">
+    <section className="text-center w-full h-screen flex flex-col justify-center">
       <h2 className="text-black text-2xl font-bold">Explore More</h2>
       <p className="mt-4 text-gray-800">
         Encourage visitors to explore the rest of the site
