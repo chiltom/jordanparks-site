@@ -1,9 +1,17 @@
 import { ReactElement } from "react";
+import Image from "next/image";
+import lesson_image from "@/public/images/lessons_page.jpg";
 
 const HeaderSection: React.FC = (): ReactElement => {
   return (
-    <header className="text-center flex flex-col pt-72 w-full h-full">
-      <h1 className="text-5xl font-bold text-white">Music Lessons</h1>
+    <header className="relative w-full h-full">
+      <Image
+        src={lesson_image}
+        alt="Jordan Parks"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-90"
+      />
     </header>
   );
 };

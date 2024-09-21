@@ -1,10 +1,17 @@
 import { ReactElement } from "react";
+import Image from "next/image";
+import store_image from "@/public/images/store_page.jpg";
 
 const SamplePackHeader: React.FC = (): ReactElement => {
   return (
-    <header className="text-center flex flex-col pt-72 w-full h-full">
-      <h1 className="text-5xl font-bold text-white">Merchandise</h1>
-      <p className="mt-4 text-lg text-gray-300">High quality merchandise</p>
+    <header className="relative w-full h-full">
+      <Image
+        src={store_image}
+        alt="Jordan Parks"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-90"
+      />
     </header>
   );
 };

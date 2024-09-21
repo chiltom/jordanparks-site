@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
-import image1 from "@/public/image1.jpg";
+import main_image from "@/public/images/main_page.jpg";
 
 /**
  * This component will change, the image will turn into a banner image
@@ -9,13 +9,13 @@ import image1 from "@/public/image1.jpg";
  */
 const HeroHeader: React.FC = (): ReactElement => {
   return (
-    <header className="text-center flex flex-col items-center gap-10 pt-10 w-full h-full">
+    <header className="relative w-full h-full">
       <Image
-        src={image1}
+        src={main_image}
         alt="Jordan Parks"
-        width={400}
-        height={400}
-        className="rounded-lg"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-90"
       />
     </header>
   );

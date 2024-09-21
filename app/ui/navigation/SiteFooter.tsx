@@ -1,10 +1,10 @@
-import Image from "next/image";
-import instagramBrand from "@/public/instagram-brands-solid.svg";
-import Link from "next/link";
 import { ReactElement } from "react";
-import spotifyBrand from "@/public/spotify-brands-solid.svg";
-import tiktokBrand from "@/public/tiktok-brands-solid.svg";
-import youtubeBrand from "@/public/youtube-brands-solid.svg";
+import Image from "next/image";
+import Link from "next/link";
+import instagramBrand from "@/public/logos/instagram-brands-solid.svg";
+import spotifyBrand from "@/public/logos/spotify-brands-solid.svg";
+import tiktokBrand from "@/public/logos/tiktok-brands-solid.svg";
+import youtubeBrand from "@/public/logos/youtube-brands-solid.svg";
 
 const Footer: React.FC = (): ReactElement => {
   return (

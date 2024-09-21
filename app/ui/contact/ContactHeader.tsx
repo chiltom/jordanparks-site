@@ -1,10 +1,17 @@
 import { ReactElement } from "react";
+import Image from "next/image";
+import contact_image from "@/public/images/contact_page.jpg";
 
 const ContactHeader: React.FC = (): ReactElement => {
   return (
-    <header className="text-center flex flex-col pt-72 w-full h-full">
-      <h1 className="text-5xl font-bold text-white">Contact</h1>
-      <p className="mt-4 text-lg text-gray-300">Get in touch</p>
+    <header className="relative w-full h-full">
+      <Image
+        src={contact_image}
+        alt="Jordan Parks"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-90"
+      />
     </header>
   );
 };

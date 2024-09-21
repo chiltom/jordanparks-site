@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
-import image3 from "@/public/image3.jpeg";
+import image3 from "@/public/images/image3.jpeg";
 
 const RecognitionSection: React.FC = (): ReactElement => {
   return (

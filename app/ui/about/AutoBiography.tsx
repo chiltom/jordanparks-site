@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
-import image6 from "@/public/image6.jpeg";
+import image6 from "@/public/images/image6.jpeg";
 
 const Biography: React.FC = (): ReactElement => {
   return (

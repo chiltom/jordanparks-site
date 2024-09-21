@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
-import image2 from "@/public/image2.jpg";
+import about_image from "@/public/images/about_page.jpg";
 
 /**
  * This component will change, the image will turn into a banner image
@@ -9,17 +9,14 @@ import image2 from "@/public/image2.jpg";
  */
 const AboutHeader: React.FC = (): ReactElement => {
   return (
-    <header className="text-center flex flex-col items-center w-full h-full">
-      <h1 className="text-5xl font-bold text-white">Jordan</h1>
-      <div className="py-6">
-        <Image
-          src={image2}
-          alt="Jordan Parks"
-          width={500}
-          height={500}
-          className="rounded-lg"
-        />
-      </div>
+    <header className="relative w-full h-full">
+      <Image
+        src={about_image}
+        alt="Jordan Parks"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-90"
+      />
     </header>
   );
 };
