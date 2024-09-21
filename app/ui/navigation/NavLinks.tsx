@@ -28,7 +28,15 @@ const links = [
   },
 ];
 
-const NavLinks = ({ isMobile }: { isMobile: boolean }): ReactElement => {
+interface NavLinkProps {
+  isMobile: boolean;
+  handleClose: () => void;
+}
+
+const NavLinks: React.FC<NavLinkProps> = ({
+  isMobile,
+  handleClose,
+}): ReactElement => {
   const pathname: string = usePathname();
 
   return (
@@ -50,6 +58,7 @@ const NavLinks = ({ isMobile }: { isMobile: boolean }): ReactElement => {
                 "ring-accent ring-2": pathname === link.href,
               }
             )}
+            onClick={handleClose}
           >
             <p>{link.name}</p>
           </Link>
