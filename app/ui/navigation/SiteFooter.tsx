@@ -16,7 +16,7 @@ const Footer: React.FC = (): ReactElement => {
         <ul className="flex space-x-6">
           <li>
             <Link
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/jordanlloydparks"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -25,7 +25,7 @@ const Footer: React.FC = (): ReactElement => {
           </li>
           <li>
             <Link
-              href="https://www.tiktok.com"
+              href="https://www.tiktok.com/@jordanlparks"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -43,7 +43,7 @@ const Footer: React.FC = (): ReactElement => {
           </li>
           <li>
             <Link
-              href="https://www.youtube.com"
+              href="https://youtube.com/@jordanlloydparks"
               target="_blank"
               rel="noopener noreferrer"
             >
