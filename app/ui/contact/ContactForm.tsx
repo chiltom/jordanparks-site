@@ -1,12 +1,18 @@
 "use client";
 
 import { useState, ReactElement } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
-const ContactForm: React.FC = (): ReactElement => {
+interface ContactFormProps {
+  scrollToNextSection: () => void;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({
+  scrollToNextSection,
+}): ReactElement => {
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [age, setAge] = useState<string>("");
   const [status, setStatus] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,7 +28,7 @@ const ContactForm: React.FC = (): ReactElement => {
   };
 
   return (
-    <section className="section text-center w-full h-full flex flex-col justify-center">
+    <section className="text-center w-full h-screen flex flex-col justify-center">
       <h2 className="text-2xl font-bold mb-2 text-black">Contact</h2>
       <p className="text-gray-800 mb-4">
         Please reach out to me with any questions, booking requests, or
@@ -85,6 +91,14 @@ const ContactForm: React.FC = (): ReactElement => {
           Send Message
         </button>
       </form>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
+        <button
+          onClick={scrollToNextSection}
+          className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white"
+        >
+          <FaChevronDown size={24} />
+        </button>
+      </div>
     </section>
   );
 };

@@ -1,10 +1,17 @@
 import { ReactElement } from "react";
 import Image from "next/image";
 import image6 from "@/public/images/image6.jpeg";
+import { FaChevronDown } from "react-icons/fa";
 
-const Biography: React.FC = (): ReactElement => {
+interface BiographyProps {
+  scrollToNextSection: () => void;
+}
+
+const Biography: React.FC<BiographyProps> = ({
+  scrollToNextSection,
+}): ReactElement => {
   return (
-    <section className="section w-full h-full flex flex-col justify-center items-center">
+    <section className="w-full h-screen flex flex-col justify-center items-center">
       <h2 className="text-black text-2xl font-bold">Jordan&apos;s History</h2>
       <div className="text-xs md:text-sm md:gap-10 md:px-80">
         <p className="mt-3 md:mt-3 text-gray-800">
@@ -52,6 +59,14 @@ const Biography: React.FC = (): ReactElement => {
         height={150}
         className="rounded-lg mt-6"
       />
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
+        <button
+          onClick={scrollToNextSection}
+          className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white"
+        >
+          <FaChevronDown size={24} />
+        </button>
+      </div>
     </section>
   );
 };

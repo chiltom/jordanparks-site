@@ -11,7 +11,7 @@ const Navbar = (): ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const handleToggle = () => {
+  const handleToggle = (): void => {
     if (isOpen) {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -23,7 +23,7 @@ const Navbar = (): ReactElement => {
     }
   };
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     setIsTransitioning(true);
     setTimeout(() => {
       setIsOpen(false);
