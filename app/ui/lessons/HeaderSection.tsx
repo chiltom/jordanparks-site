@@ -18,6 +18,8 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
         layout="fill"
         objectFit="cover"
         className="opacity-90"
+        priority
+        sizes="100vw"
       />
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
         <button
