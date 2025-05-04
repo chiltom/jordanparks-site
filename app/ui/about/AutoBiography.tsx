@@ -25,7 +25,7 @@ const Biography: React.FC<BiographyProps> = ({
         className="max-w-4xl mx-auto"
       >
         <h2 className="text-black text-3xl md:text-4xl font-bold mb-8 text-center">
-          Jordan's Story
+          Jordan&apos;s Story
         </h2>
 
         <div className="bg-black/10 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-xl">

@@ -71,9 +71,9 @@ const FeatureSection: React.FC = (): ReactElement => {
               Drawing from his extensive experience as both a performer and
               session musician, this upcoming release will feature
               collaborations with several talented artists from the Denver music
-              scene. The album will span multiple genres, reflecting Jordan's
-              versatile musical background and his passion for creating
-              authentic, emotionally resonant music.
+              scene. The album will span multiple genres, reflecting
+              Jordan&apos;s versatile musical background and his passion for
+              creating authentic, emotionally resonant music.
             </p>
 
             <p className="text-gray-800 font-medium">
@@ -120,22 +120,6 @@ const FeatureSection: React.FC = (): ReactElement => {
             </div>
           </motion.div>
         </div>
-      </motion.div>
-
-      <motion.div
-        className="mt-12 text-center"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <button
-          onClick={scrollToNextSection}
-          className="p-3 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300 hover:scale-110"
-          aria-label="Scroll down"
-        >
-          <FaChevronDown size={24} className="animate-bounce" />
-        </button>
       </motion.div>
     </section>
   );
