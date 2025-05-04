@@ -1,6 +1,8 @@
 "use client";
 
-import { ReactElement, useRef } from "react";
+import type React from "react";
+
+import { type ReactElement, useRef } from "react";
 import HeroHeader from "./ui/home/HeroHeader";
 import CTASection from "./ui/home/CTASection";
 

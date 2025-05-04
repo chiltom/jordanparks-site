@@ -1,25 +1,22 @@
-import { ReactElement } from "react";
-import { FaChevronDown } from "react-icons/fa";
+"use client";
 
-interface GallerySectionProps {
-  scrollToNextSection: () => void;
-}
+import type React from "react";
 
-const GallerySection: React.FC<GallerySectionProps> = ({
-  scrollToNextSection,
-}): ReactElement => {
+import type { ReactElement } from "react";
+import { motion } from "framer-motion";
+
+const GallerySection: React.FC = (): ReactElement => {
   return (
     <section className="text-center w-full h-screen flex flex-col justify-center">
-      <h2 className="text-black text-2xl font-bold">Making the Music</h2>
-      <p className="mt-4 text-gray-800">Action shots section</p>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
-        <button
-          onClick={scrollToNextSection}
-          className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white"
-        >
-          <FaChevronDown size={24} />
-        </button>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-black text-2xl font-bold">Making the Music</h2>
+        <p className="mt-4 text-gray-800">Action shots section</p>
+      </motion.div>
     </section>
   );
 };

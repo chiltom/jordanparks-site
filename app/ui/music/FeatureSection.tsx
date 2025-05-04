@@ -1,29 +1,126 @@
-import { ReactElement } from "react";
-import { FaChevronDown } from "react-icons/fa";
+"use client";
 
-interface FeatureSectionProps {
-  scrollToNextSection: () => void;
-}
+import type React from "react";
+import type { ReactElement } from "react";
+import { FaChevronDown, FaSpotify, FaYoutube, FaApple } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
-const FeatureSection: React.FC<FeatureSectionProps> = ({
-  scrollToNextSection,
-}): ReactElement => {
+const FeatureSection: React.FC = (): ReactElement => {
   return (
-    <section className="text-center w-full h-screen flex flex-col justify-center">
-      <h2 className="text-black text-2xl font-bold">Latest Album</h2>
-      <p className="mt-4 text-gray-800">
-        Spotlight on the latest album or single with cover art, release
-        information, and a brief description
-      </p>
-      {/* Button link to YT */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-40 hover:opacity-90">
-        <button
-          onClick={scrollToNextSection}
-          className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white"
-        >
-          <FaChevronDown size={24} />
-        </button>
-      </div>
+    <section className="w-full min-h-screen flex flex-col justify-center py-16 px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto"
+      >
+        <h2 className="text-black text-3xl md:text-4xl font-bold mb-12 text-center">
+          Coming Soon
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="relative w-64 h-64 md:w-80 md:h-80"
+            >
+              <Image
+                src="/placeholder.svg?height=400&width=400"
+                alt="Album Cover"
+                width={400}
+                height={400}
+                className="rounded-lg shadow-2xl object-cover"
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Debut Album
+              </h3>
+              <p className="text-lg text-gray-700 mt-2">
+                Expected Release: Fall 2024
+              </p>
+            </div>
+
+            <p className="text-gray-800">
+              Jordan is currently in the studio working on his debut album,
+              which promises to showcase his unique blend of melodic guitar work
+              and innovative compositions. Each track will tell a story, taking
+              listeners on a journey through different musical landscapes.
+            </p>
+
+            <p className="text-gray-800">
+              Drawing from his extensive experience as both a performer and
+              session musician, this upcoming release will feature
+              collaborations with several talented artists from the Denver music
+              scene. The album will span multiple genres, reflecting
+              Jordan&apos;s versatile musical background and his passion for
+              creating authentic, emotionally resonant music.
+            </p>
+
+            <p className="text-gray-800 font-medium">
+              Stay tuned for singles dropping throughout the year, leading up to
+              the full album release!
+            </p>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <Link
+                  href="#"
+                  className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full"
+                >
+                  <FaSpotify /> Follow
+                </Link>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <Link
+                  href="#"
+                  className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full"
+                >
+                  <FaYoutube /> Subscribe
+                </Link>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <Link
+                  href="#"
+                  className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-full"
+                >
+                  <FaApple /> Pre-Save
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
     </section>
   );
 };
