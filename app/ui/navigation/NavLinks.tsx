@@ -1,9 +1,11 @@
 "use client";
 
+import type React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
+import { motion } from "framer-motion";
 
 const links = [
   {
@@ -39,32 +41,52 @@ const NavLinks: React.FC<NavLinkProps> = ({
 }): ReactElement => {
   const pathname: string = usePathname();
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div
+    <motion.div
       className={
         isMobile
-          ? "flex flex-col items-end space-y-2"
+          ? "flex flex-col items-center space-y-4 py-4"
           : "flex flex-row space-x-4"
       }
+      variants={container}
+      initial="hidden"
+      animate="show"
     >
-      {links.map((link) => {
+      {links.map((link, index) => {
         return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={clsx(
-              "flex items-center justify-center gap-2 rounded-md text-neon text-textPrimary px-2 py-1 md:py-3 text-xl md:text-lg font-medium md:px-3",
-              {
-                "ring-rose-300 ring-2": pathname === link.href,
-              }
-            )}
-            onClick={handleClose}
-          >
-            <p>{link.name}</p>
-          </Link>
+          <motion.div key={link.name} variants={item}>
+            <Link
+              href={link.href}
+              className={clsx(
+                "flex items-center justify-center gap-2 rounded-md text-neon px-3 py-2 text-lg font-medium transition-all duration-300",
+                {
+                  "ring-rose-300 ring-2 bg-black/30": pathname === link.href,
+                  "hover:bg-black/20 hover:scale-105": pathname !== link.href,
+                },
+              )}
+              onClick={handleClose}
+            >
+              <p>{link.name}</p>
+            </Link>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

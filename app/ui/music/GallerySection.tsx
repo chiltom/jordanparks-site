@@ -1,4 +1,8 @@
-import { ReactElement } from "react";
+"use client";
+
+import type React from "react";
+
+import type { ReactElement } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 interface GallerySectionProps {

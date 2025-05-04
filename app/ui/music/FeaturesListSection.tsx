@@ -1,4 +1,5 @@
-import { ReactElement } from "react";
+import type React from "react";
+import type { ReactElement } from "react";
 
 const FeaturesListSection: React.FC = (): ReactElement => {
   return (

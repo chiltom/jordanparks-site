@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useRef } from "react";
+import { type ReactElement, useRef } from "react";
 import ApplicationFormSection from "../ui/lessons/ApplicationFormSection";
 import FAQSection from "../ui/lessons/FAQSection";
 import HeaderSection from "../ui/lessons/HeaderSection";

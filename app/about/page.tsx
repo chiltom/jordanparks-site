@@ -1,7 +1,8 @@
 "use client";
 
-import { ReactElement, useRef } from "react";
-import AboutCTA from "../ui/about/AboutCTA";
+import type React from "react";
+
+import { type ReactElement, useRef } from "react";
 import AboutHeader from "../ui/about/AboutHeader";
 import GallerySection from "../ui/about/GallerySection";
 import RecognitionSection from "../ui/about/RecognitionSection";
@@ -11,7 +12,6 @@ const About: React.FC = (): ReactElement => {
   const bioSectionRef = useRef<HTMLDivElement>(null);
   const recSectionRef = useRef<HTMLDivElement>(null);
   const galSectionRef = useRef<HTMLDivElement>(null);
-  const ctaSectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToBioSection = (): void => {
     if (bioSectionRef.current) {
@@ -31,12 +31,6 @@ const About: React.FC = (): ReactElement => {
     }
   };
 
-  const scrollToCTASection = (): void => {
-    if (ctaSectionRef.current) {
-      ctaSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <AboutHeader scrollToNextSection={scrollToBioSection} />
@@ -47,10 +41,7 @@ const About: React.FC = (): ReactElement => {
         <RecognitionSection scrollToNextSection={scrollToGalSection} />
       </div>
       <div ref={galSectionRef} className="section">
-        <GallerySection scrollToNextSection={scrollToCTASection} />
-      </div>
-      <div ref={ctaSectionRef} className="section">
-        <AboutCTA />
+        <GallerySection />
       </div>
     </>
   );
